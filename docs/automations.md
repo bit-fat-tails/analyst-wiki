@@ -9,12 +9,37 @@ execution: Claude Code background agents (`/schedule`), Codex automations,
 cron jobs calling an LLM API, or even calendar-triggered scripts. The exact
 implementation depends on your setup — what matters is the coverage and rhythm.
 
+## Tiers
+
+Not all automations are equally important. Build them in order:
+
+**Tier 1 — The proven core.** Start here. These are the automations that
+deliver daily value from week one:
+- Morning Briefing
+- News Monitors (AM + PM)
+- Email/Research Extractor
+- Weekly Review
+- Earnings Tracker
+- Memory/Context Update
+
+**Tier 2 — Add once Tier 1 is stable.** These add polish and depth but
+require Tier 1 to be running smoothly:
+- Evening Wrap
+- Alerts Digest
+- Thesis Guard
+- Research Decay Monitor
+
+Get Tier 1 right first. Resist the urge to build everything on day one —
+an unreliable automation is worse than no automation because you stop
+trusting it and start doing manual checks.
+
 ---
 
 ## The Daily Cycle
 
-A production analyst wiki runs 4-6 automated passes per day. Each one has a
-specific job and writes to a specific place in the wiki.
+A production analyst wiki runs 3-4 automated passes per day in Tier 1,
+expanding to 5-6 once Tier 2 is added. Each one has a specific job and
+writes to a specific place in the wiki.
 
 ```
   06:00-07:00  ┌─────────────────────┐
@@ -102,7 +127,7 @@ updates the relevant company notes directly.
 - Distinguish between "notes-worthy" updates (go into company notes) and
   "research queue" items (worth following up but not yet durable)
 
-### Evening Wrap
+### Evening Wrap *(Tier 2)*
 
 **When:** After market close, every day
 
@@ -118,7 +143,7 @@ briefing.
 - Market Close / Moves (material covered-company moves)
 - Action Queue (tomorrow's follow-ups)
 
-### Alerts Digest
+### Alerts Digest *(Tier 2)*
 
 **When:** End of day, every day
 
@@ -196,7 +221,7 @@ missing key context.
 - Include adjacent peers that might move your companies on sympathy
 - Increase frequency to daily during peak earnings season
 
-### Thesis Guard
+### Thesis Guard *(Tier 2)*
 
 **When:** 2-3 times per week
 
@@ -217,7 +242,7 @@ believe.
 Investing framework. It systematically checks whether the market's
 expectations and your expectations are converging or diverging.
 
-### Research Decay Monitor
+### Research Decay Monitor *(Tier 2)*
 
 **When:** Weekly (or daily if you have broad coverage)
 
