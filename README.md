@@ -211,6 +211,7 @@ analyst-wiki/
 │   └── {topic-slug}/
 │       └── output.md           # Completed research
 │
+├── Alerts/                     # Time-sensitive signals (news, filings, broker notes)
 ├── Daily/                      # Daily logs and market notes
 ├── Weekly/                     # Weekly summaries
 ├── Meetings/                   # Meeting prep and notes
@@ -218,6 +219,11 @@ analyst-wiki/
 ├── ideas/                      # New investment ideas
 ├── Portfolio/                  # Portfolio-level views
 ├── Macro/                      # Macro research
+│
+├── tools/                      # Custom tooling (scripts, search, automation)
+├── projects/                   # Research-related side projects
+├── personal/                   # Career development, travel, learning
+├── hiring/                     # Hiring materials, candidate evaluation
 │
 ├── templates/                  # File templates
 │   ├── note_template.md        # Company notes template

@@ -42,6 +42,10 @@ analyst-wiki/                     # Root workspace
 ├── Portfolio/                    # Portfolio-level views
 ├── earnings/                     # Earnings season tracking
 ├── Macro/                        # Macro research and notes
+├── tools/                        # Custom tooling (scripts, search, automation)
+├── projects/                     # Research-related side projects
+├── personal/                     # Career development, travel, learning
+├── hiring/                       # Hiring materials, candidate evaluation
 ├── output/                       # Scratch output directory
 ├── tmp/                          # Ephemeral scratch space (auto-cleaned)
 ├── archive/                      # Archived materials
