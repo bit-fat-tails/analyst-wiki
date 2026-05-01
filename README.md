@@ -389,14 +389,16 @@ and setup instructions for Claude Code, Codex, and custom schedulers.
 
 The short version:
 
+- **You can outsource your thinking but you cannot outsource your
+  understanding.** The LLM does the thinking — summarizing, cross-referencing,
+  filing, monitoring. You do the understanding — forming conviction,
+  identifying variant views, making investment decisions. The wiki makes your
+  understanding deeper, not optional.
 - **Knowledge should compound, not be re-derived.** RAG retrieves chunks. A
   wiki accumulates understanding.
 - **Concept pages are the alpha.** Company notes are table stakes. Pages that
   synthesize themes across companies -- "HBM supercycle", "AI inference cost
   curves", "app store regulation" -- are where the compounding happens.
-- **The analyst decides, the LLM does bookkeeping.** You curate sources, direct
-  analysis, make investment decisions. The LLM summarizes, cross-references,
-  files, and flags inconsistencies.
 - **Markdown + git = version history for free.** Diffs show how your thinking
   evolved. No vendor lock-in. No subscription. Works with any LLM.
 

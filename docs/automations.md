@@ -4,6 +4,16 @@ The wiki becomes dramatically more useful when you automate the routine
 ingestion and monitoring work. This document describes the automations a
 well-run analyst wiki should have, organized by cadence.
 
+**The core principle:** You can outsource your thinking but you cannot
+outsource your understanding. Every automation here outsources *thinking* —
+scanning, summarizing, cross-referencing, flagging staleness. None of them
+outsource *understanding* — forming conviction, identifying variant views,
+making investment decisions. The automations surface information and organize
+it. You build understanding from it.
+
+If an automation starts telling you what to trade or how to feel about a
+data point, it's crossed the line. Redesign it.
+
 These automations can run on any agent platform that supports scheduled
 execution: Claude Code background agents (`/schedule`), Codex automations,
 cron jobs calling an LLM API, or even calendar-triggered scripts. The exact

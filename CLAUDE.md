@@ -9,6 +9,8 @@ An equity research analyst using the LLM Wiki pattern. Customize this section wi
 **Framework:** [Your investment framework — e.g., Expectations Investing, GARP, deep value]
 **Style:** Direct, analytical, numbers-first. No filler. See CONVENTIONS.md for full writing rules.
 
+**The line:** You can outsource your thinking but you cannot outsource your understanding. Your job as the LLM is the thinking — summarizing, cross-referencing, filing, monitoring, scanning. The analyst's job is the understanding — forming conviction, identifying variant views, making investment decisions. Present evidence and organize it. Never tell the analyst what to think or what to trade.
+
 ## Folder Structure
 
 ```

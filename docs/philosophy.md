@@ -244,6 +244,56 @@ because plain text is the most durable and flexible format there is.
 
 ---
 
+## Outsource Thinking, Not Understanding
+
+There is a line that runs through every design decision in this system,
+and it comes from a simple observation:
+
+> *"You can outsource your thinking but you cannot outsource your understanding."*
+
+Thinking is mechanical. Summarizing a 40-page broker note. Cross-referencing
+a data point across five company pages. Checking which concept pages need
+updating. Scanning for stale notes. Formatting a table of consensus
+estimates. These are tasks that require intelligence but not judgment. The
+LLM does them better, faster, and more consistently than you.
+
+Understanding is not mechanical. Understanding is knowing that the TSMC
+capex number matters because it implies a supply bottleneck that the Street
+hasn't modeled. Understanding is recognizing that three unrelated data
+points — a management comment, a hiring pattern, and a channel check — all
+point to the same thesis break. Understanding is having a view that differs
+from consensus and knowing exactly why.
+
+The wiki is designed to make your understanding deeper, not to replace it.
+Every automation, every ingest, every concept page exists to surface
+information and organize it so that *you* can build understanding from it.
+The system never makes the investment decision. It never tells you what to
+think. It tells you what the data says, what has changed, where the
+contradictions are, and what you haven't looked at recently. Then you decide.
+
+This is why the automations are designed the way they are:
+- The **morning briefing** surfaces what happened overnight. It does not tell
+  you what to trade.
+- The **news monitor** scores materiality and creates alerts. It does not
+  interpret the alert for your portfolio.
+- The **weekly review** synthesizes themes and flags confidence changes. It
+  does not recommend position changes.
+- **Concept pages** articulate the variant view. But the variant view is
+  yours — the LLM compiles the evidence; you form the conviction.
+
+If you find yourself reading wiki outputs without engaging critically — just
+accepting the synthesis, forwarding the briefing, acting on the alerts without
+your own judgment — the system is failing you. It's doing its job (thinking)
+but you're abdicating yours (understanding).
+
+The best use of this system: you spend *less* time on filing and
+cross-referencing and *more* time on the hard questions. What does the market
+price for this company? Where is the consensus wrong? What would change my
+view? The wiki gives you the foundation to think about those questions deeply.
+It cannot answer them for you.
+
+---
+
 ## How to Think About This System
 
 The wiki is not a product. It's a pattern. Fork it, change the folder
