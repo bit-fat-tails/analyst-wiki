@@ -1,0 +1,32 @@
+# Broker reports and PDFs (proprietary)
+Companies/*/broker-reports/
+Companies/*/models/
+*.pdf
+
+# Scratch and temp
+tmp/
+output/
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Claude Code local config (contains personal settings)
+.claude/memory/
+.claude/settings.local.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node
+node_modules/
