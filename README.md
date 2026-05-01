@@ -24,6 +24,7 @@ Based on Andrej Karpathy's
 - [Directory Structure](#directory-structure)
 - [Templates](#templates)
 - [Example Workflow](#example-workflow)
+- [Automations](#automations)
 - [Customization](#customization)
 - [Philosophy](#philosophy)
 - [FAQ](#faq)
@@ -358,6 +359,30 @@ from an MCP tool instead of a paste.
 
 See `docs/getting-started.md` for detailed setup instructions and
 `docs/philosophy.md` for the reasoning behind the design.
+
+---
+
+## Automations
+
+The wiki becomes dramatically more useful when you automate the routine
+ingestion and monitoring work. A well-run wiki has 4-6 daily automations
+and 3-4 weekly ones:
+
+| Automation | Cadence | What It Does |
+|-----------|---------|-------------|
+| Morning Briefing | Daily, pre-market | Overnight news, calendar, market moves → `Daily/` |
+| News Monitor (AM + PM) | 2x daily | Material news → `Alerts/` |
+| Email/Research Extractor | Daily | Broker notes, newsletters → company notes + `Daily/` |
+| Evening Wrap | Daily, post-close | Delta from morning → appended to `Daily/` |
+| Weekly Review | Monday | Synthesize week into themes → `Weekly/` |
+| Earnings Tracker | Monday (daily in season) | Upcoming dates + prep gaps |
+| Thesis Guard | 2-3x/week | Validate theses against new evidence |
+| Research Decay Monitor | Weekly | Scan for stale pages, missing concepts |
+
+Start with 2-3 (morning briefing, news monitor, weekly review), then expand.
+
+See `docs/automations.md` for detailed descriptions, output contracts,
+and setup instructions for Claude Code, Codex, and custom schedulers.
 
 ---
 
