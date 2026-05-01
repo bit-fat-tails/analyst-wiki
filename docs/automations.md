@@ -13,8 +13,7 @@ implementation depends on your setup — what matters is the coverage and rhythm
 
 Not all automations are equally important. Build them in order:
 
-**Tier 1 — The proven core.** Start here. These are the automations that
-deliver daily value from week one:
+The automations that deliver daily value from week one:
 - Morning Briefing
 - News Monitors (AM + PM)
 - Email/Research Extractor
@@ -22,24 +21,16 @@ deliver daily value from week one:
 - Earnings Tracker
 - Memory/Context Update
 
-**Tier 2 — Add once Tier 1 is stable.** These add polish and depth but
-require Tier 1 to be running smoothly:
-- Evening Wrap
-- Alerts Digest
-- Thesis Guard
-- Research Decay Monitor
-
-Get Tier 1 right first. Resist the urge to build everything on day one —
-an unreliable automation is worse than no automation because you stop
-trusting it and start doing manual checks.
+Six automations. That's all you need. Resist the urge to build more on
+day one — an unreliable automation is worse than no automation because you
+stop trusting it and start doing manual checks.
 
 ---
 
 ## The Daily Cycle
 
-A production analyst wiki runs 3-4 automated passes per day in Tier 1,
-expanding to 5-6 once Tier 2 is added. Each one has a specific job and
-writes to a specific place in the wiki.
+A production analyst wiki runs 3 automated passes per day. Each one has a
+specific job and writes to a specific place in the wiki.
 
 ```
   06:00-07:00  ┌─────────────────────┐
@@ -58,14 +49,6 @@ writes to a specific place in the wiki.
   14:00-15:00  ┌─────────────────────┐
   (afternoon)  │ News Monitor PM     │──► Alerts/YYYY-MM-DD-*.md
                └─────────────────────┘    (delta from morning only)
-
-  17:00-18:00  ┌─────────────────────┐
-  (close)      │ Evening Wrap        │──► appended to Daily/YYYY-MM-DD.md
-               └─────────────────────┘
-
-  18:00-19:00  ┌─────────────────────┐
-  (post-close) │ Alerts Digest       │──► Daily/YYYY-MM-DD-alerts-digest/
-               └─────────────────────┘    (consolidated daily summary)
 ```
 
 ### Morning Briefing
@@ -127,43 +110,11 @@ updates the relevant company notes directly.
 - Distinguish between "notes-worthy" updates (go into company notes) and
   "research queue" items (worth following up but not yet durable)
 
-### Evening Wrap *(Tier 2)*
-
-**When:** After market close, every day
-
-**What it does:** Appends an end-of-day summary to the morning briefing file.
-Focuses on what changed since morning — this is a delta, not a second full
-briefing.
-
-**Output:** Appended to `Daily/YYYY-MM-DD.md`
-
-**Structure:**
-- What Changed Since Morning
-- Meeting Takeaways (only investable implications)
-- Market Close / Moves (material covered-company moves)
-- Action Queue (tomorrow's follow-ups)
-
-### Alerts Digest *(Tier 2)*
-
-**When:** End of day, every day
-
-**What it does:** Consolidates all alerts from the day's monitors, extractors,
-and other automations into one summary. De-duplicates and ranks by
-decision-relevance.
-
-**Output:** Consolidated report in `Daily/YYYY-MM-DD-alerts-digest/`
-
-**Key principles:**
-- Lead with Top Alerts (5-8 most decision-relevant items)
-- Group remaining items by source
-- Each alert appears exactly once
-- Optionally email or message the digest to yourself for mobile review
-
 ---
 
 ## The Weekly Cycle
 
-Weekly automations handle synthesis, thesis validation, and wiki maintenance.
+Weekly automations handle synthesis and earnings prep.
 
 ```
   Monday AM    ┌─────────────────────┐
@@ -172,15 +123,6 @@ Weekly automations handle synthesis, thesis validation, and wiki maintenance.
 
   Monday AM    ┌─────────────────────┐
                │ Earnings Tracker    │──► earnings/ or reports/
-               └─────────────────────┘
-
-  Mon/Wed/Fri  ┌─────────────────────┐
-               │ Thesis Guard        │──► Alerts/ + notes.md updates
-               └─────────────────────┘
-
-  Weekly       ┌─────────────────────┐
-               │ Research Decay      │──► Maintenance/staleness-report.md
-               │ Monitor             │
                └─────────────────────┘
 ```
 
@@ -221,43 +163,6 @@ missing key context.
 - Include adjacent peers that might move your companies on sympathy
 - Increase frequency to daily during peak earnings season
 
-### Thesis Guard *(Tier 2)*
-
-**When:** 2-3 times per week
-
-**What it does:** Validates your active theses against new evidence. Scores
-supporting vs contradicting signals and creates alerts for red flags. This is
-the automation that keeps you honest about what the data says vs what you
-believe.
-
-**Output:** Daily artifact + alerts for red flags + direct notes.md updates
-
-**Structure:**
-- Critical Thesis Changes (items that change confidence or sizing)
-- Scorecard (table: ticker, thesis direction, evidence direction, confidence)
-- Red Flags (contradicting signals with severity)
-- Action Queue (concrete follow-ups)
-
-**Key principle:** This is the most important automation for an Expectations
-Investing framework. It systematically checks whether the market's
-expectations and your expectations are converging or diverging.
-
-### Research Decay Monitor *(Tier 2)*
-
-**When:** Weekly (or daily if you have broad coverage)
-
-**What it does:** Scans all wiki pages for staleness. Classifies urgency based
-on coverage status and time since last update. This is the automated version
-of the wiki's lint workflow.
-
-**Output:** Staleness report with tiered urgency
-
-**Checks:**
-- Active companies with notes not updated in >14 days
-- Concept pages older than the newest linked company note
-- Companies reporting soon with stale prep
-- Research topics marked "Active" but not touched in >30 days
-
 ---
 
 ## Maintenance Automations
@@ -271,14 +176,6 @@ Less frequent automations that keep the infrastructure healthy.
 **What it does:** Updates long-term context artifacts — glossary terms, people
 profiles, and cached context — from recent work. Keeps your LLM's persistent
 memory current without manual curation.
-
-### Settings & Tooling Cleanup
-
-**When:** Weekly or biweekly
-
-**What it does:** Reviews tool configurations for redundancy, outdated
-permissions, or unsafe patterns. Updates dependencies for any custom tooling.
-Reports changes and flags items needing manual attention.
 
 ---
 
@@ -317,8 +214,7 @@ Morning briefing → `Daily/`. News monitor → `Alerts/`. Weekly review →
 `Weekly/`. No automation should scatter output across random locations.
 
 **2. Deltas, not replays.**
-The PM news monitor only covers what changed since the AM monitor. The
-evening wrap only covers what changed since the morning briefing. Don't
+The PM news monitor only covers what changed since the AM monitor. Don't
 restate the same fact in every automation.
 
 **3. Decision-oriented, not comprehensive.**
@@ -336,12 +232,12 @@ are the worst kind — you stop trusting the system and start doing manual
 checks, which defeats the purpose.
 
 **6. Start with 2-3, then expand.**
-Don't build all 10 automations on day one. Start with:
+Start with:
 1. Morning briefing (highest daily value)
 2. News monitor (keeps alerts flowing)
 3. Weekly review (forces synthesis)
 
-Add the rest once the rhythm is established.
+Add the email extractor and earnings tracker once those are solid.
 
 ---
 
@@ -363,6 +259,5 @@ The automations and the wiki reinforce each other:
 ```
 
 This is the compounding loop. The morning briefing is better when the wiki
-has rich company notes. The thesis guard is sharper when concept pages track
-the variant view. The weekly review is more useful when the log records every
-ingest. Each piece makes the others better.
+has rich company notes. The weekly review is more useful when the log records
+every ingest. Each piece makes the others better.

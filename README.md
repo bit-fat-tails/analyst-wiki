@@ -368,8 +368,6 @@ The wiki becomes dramatically more useful when you automate the routine
 ingestion and monitoring work. A well-run wiki has 4-6 daily automations
 and 3-4 weekly ones:
 
-**Tier 1 — Start here** (the proven core):
-
 | Automation | Cadence | What It Does |
 |-----------|---------|-------------|
 | Morning Briefing | Daily, pre-market | Overnight news, calendar, market moves → `Daily/` |
@@ -379,16 +377,8 @@ and 3-4 weekly ones:
 | Earnings Tracker | Monday (daily in season) | Upcoming dates + prep gaps |
 | Memory/Context Update | Weekly | Keep LLM long-term memory current |
 
-**Tier 2 — Add once Tier 1 is running smoothly:**
-
-| Automation | Cadence | What It Does |
-|-----------|---------|-------------|
-| Evening Wrap | Daily, post-close | Delta from morning → appended to `Daily/` |
-| Alerts Digest | Daily, end of day | Consolidated daily summary → `Daily/` |
-| Thesis Guard | 2-3x/week | Validate theses against new evidence |
-| Research Decay Monitor | Weekly | Scan for stale pages, missing concepts |
-
-Get Tier 1 right first. Tier 2 adds polish but Tier 1 is where the compounding starts.
+Start with morning briefing + news monitor + weekly review. Add the rest
+once those are solid.
 
 See `docs/automations.md` for detailed descriptions, output contracts,
 and setup instructions for Claude Code, Codex, and custom schedulers.
